@@ -1,7 +1,5 @@
 # Simple-todo-js
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 This is simple todo app using vanilla JavaScript, CSS3 and HTML5.
 
   - You can create/delete/make done your tasks!
