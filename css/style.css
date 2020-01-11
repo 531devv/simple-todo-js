@@ -1,0 +1,222 @@
+body {
+    font-family: 'Gidole';
+    user-select: none;
+}
+
+.todos-header-text p {
+    font-size: 25px;
+    color: #5D5D5D;
+    
+}
+
+.todos-header-text h3 {
+    font-size: 30px;
+}
+
+.todos-list ul {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todos-list li { 
+    display: block;
+    font-size: 25px;
+    list-style-type: square;
+    width: 530px;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    cursor: pointer;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+.todos-box {
+    transform: scale(0.8);
+    width: 750px;
+    height: 750px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 15px;
+    border: none;
+}
+
+.todos-header {
+    display: block;
+    width: inherit;
+    height: 180px;
+    border-bottom: 1px solid rgba(190, 190, 190, 37);
+}
+
+.todos-list {
+    display: block;
+    width: inherit;
+    height: 467px;
+    overflow: auto;
+    border-bottom: 1px solid rgba(190, 190, 190, 37);
+    overflow-y: scroll;
+    scrollbar-color: #ff0e0ea8 #F5F5F5;
+    scrollbar-width: thin;
+}
+
+.todos-avatar {
+    float: left;
+    width: 120px;
+    height: 120px;
+    background-image: url('../images/avatar.jpg');
+    background-size: cover;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.todos-header-text {
+    display: block;
+    float: left;
+    width: 550px;
+    height: 180px;
+    cursor: default;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.todos-input-box{
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+
+input[type=text] { 
+    position: relative;
+    height: 50%;
+    width: 650px;
+    font-size: 25px;
+    color: rgb(136, 136, 136);
+    margin-left: 15px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 5px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+input[type=text]:focus{
+    outline: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.emoji-menu {
+    display: inline-block;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 10px;
+    transition: 1s ease;
+    background: linear-gradient(90deg, #d53369 0%, #ff0e0ea8 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.emoji-menu:hover{
+    transform: rotate(360deg);
+}
+
+.emoji-box{
+    position: absolute; 
+    overflow: auto;
+    width: 600px;
+    height: 300px;
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto auto auto;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: linear-gradient(90deg, #d53369 0%, #f03131 100%);
+    overflow-y: scroll;
+    scrollbar-color: #ff0e0ea8 #F5F5F5;
+    scrollbar-width: thin;
+}
+
+footer {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.icon-done {
+    margin-left: -1.3em; 
+    width: 1.3em; 
+    padding-right: 0.2em;
+    color: rgba(0, 128, 0, 0.842);
+}
+
+.icon-trash {
+    margin-left: 1.3em; 
+    width: 1.3em; 
+    float: right;
+    color: rgb(255, 47, 47);
+}
+
+
+.todos-list::-webkit-scrollbar, .emoji-box::-webkit-scrollbar{
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+
+.todos-list::-webkit-scrollbar-track, .emoji-box::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}         
+
+.todos-list::-webkit-scrollbar-thumb, .emoji-box::-webkit-scrollbar-thumb {
+    background-color: #ff0e0ea8;
+}
+
+.done {
+    text-decoration-line: line-through;
+}
+
+.emoji {
+    font-style: normal;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1366px)  {
+    .todos-box {
+        transform: scale(0.6) translateY(-250px);
+    }
+}
